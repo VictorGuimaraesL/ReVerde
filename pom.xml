@@ -100,11 +100,10 @@
           </execution>
         </executions>
       </plugin>
-      <!-- Configuração para o plugin Surefire para passar a propriedade experimental -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version> <!-- Mantenha a versão atual, pois é a que está sendo executada -->
+        <version>3.2.5</version>
         <configuration>
           <argLine>-Dnet.bytebuddy.experimental=true</argLine>
         </configuration>
