@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.reverde.reverde.PerguntaValidacaoController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="25.0" layoutY="24.0" prefHeight="751.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onBackButtonClick" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <image>
+                                <Image url="@../../../assets/BACK.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="197.0" text="Pergunta de Validação">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="350.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="habitNameLabel" text="Hábito: [Nome do Hábito]" textFill="#00b16a">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="questionLabel" alignment="CENTER" contentDisplay="CENTER" text="&quot;Qual a pergunta de validação para este hábito?&quot;" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="40.0" left="20.0" right="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Escolha a opção correta:">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <VBox fx:id="option1VBox" alignment="CENTER_LEFT" onMouseClicked="#onOptionClick" prefHeight="80.0" prefWidth="310.0" style="-fx-background-color: #E0E0E0; -fx-background-radius: 10; -fx-border-color: #C0C0C0; -fx-border-radius: 10;">
+                            <children>
+                                <Label fx:id="option1Label" text="Opção de Resposta 1" wrapText="true">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="20.0" right="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="15.0" left="20.0" right="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                        <VBox fx:id="option2VBox" alignment="CENTER_LEFT" onMouseClicked="#onOptionClick" prefHeight="80.0" prefWidth="310.0" style="-fx-background-color: #E0E0E0; -fx-background-radius: 10; -fx-border-color: #C0C0C0; -fx-border-radius: 10;">
+                            <children>
+                                <Label fx:id="option2Label" text="Opção de Resposta 2" wrapText="true">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="20.0" right="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
