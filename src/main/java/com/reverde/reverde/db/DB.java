@@ -10,7 +10,7 @@ public class DB {
         if(conn==null){
             try {
                 conn = DriverManager.getConnection
-                        ("jdbc:mysql://localhost:3306/aps","root","#Freeks20");
+                        ("jdbc:mysql://localhost:3306/aps","root","*********");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
