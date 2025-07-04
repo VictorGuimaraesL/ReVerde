@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #F8F8F8; -fx-border-color: #E0E0E0; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.reverde.reverde.EstatisticasController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="56.0" fitWidth="30.0" onMouseClicked="#onBackButtonClick" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/BACK.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                </ImageView>
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="258.0" text="Minhas Estatísticas" textFill="#2e7d32">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="209.0" text="Seu progresso em pontos!" textFill="#607d8b">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Pontos Semanal" textFill="#424242">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <LineChart fx:id="weeklyChart" prefHeight="300.0" prefWidth="360.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-color: #D0D0D0; -fx-border-radius: 10;">
+                    <xAxis>
+                        <CategoryAxis fx:id="weeklyXAxis" label="Data de Registro" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="weeklyYAxis" label="Pontos Feitos" side="LEFT" />
+                    </yAxis>
+                    <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </VBox.margin>
+                </LineChart>
+                <Label text="Pontos Mensal" textFill="#424242">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <LineChart fx:id="monthlyChart" prefHeight="300.0" prefWidth="360.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-color: #D0D0D0; -fx-border-radius: 10;">
+                    <xAxis>
+                        <CategoryAxis fx:id="monthlyXAxis" label="Data de Registro" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="monthlyYAxis" label="Pontos Feitos" side="LEFT" />
+                    </yAxis>
+                    <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </VBox.margin>
+                </LineChart>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
